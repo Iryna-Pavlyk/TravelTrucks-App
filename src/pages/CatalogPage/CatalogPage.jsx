@@ -17,9 +17,11 @@ const CatalogPage = () => {
     <>
       <AppBar />
       <div className={css.containerCatalogPage}>
-        <SideBar />
+        <div className={css.containerSideBar}>
+          <SideBar />
+        </div>
+        <CampersList />
       </div>
-      <CampersList />
     </>
   );
 };

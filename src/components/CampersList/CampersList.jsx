@@ -6,7 +6,6 @@ import Camper from '../Camper/Camper.jsx';
 const CampersList = () => {
   const campers = useSelector(selectCampers);
 
-  // console.log(campers);
   return (
     <ul>
       {campers.map(item => (
