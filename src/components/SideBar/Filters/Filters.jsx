@@ -12,7 +12,7 @@ const Filters = () => {
           <div className={css.containerDescription}>
             <svg width={32} height={32}>
               <use
-                href={`/src/assets/icons/icons.svg#icon-ac`}
+                xlinkHref={`/src/assets/icons/icons.svg#icon-ac`}
               ></use>
             </svg>
             <p className={css.filterDescription}>AC</p>
