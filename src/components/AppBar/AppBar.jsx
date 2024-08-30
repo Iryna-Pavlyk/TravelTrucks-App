@@ -2,6 +2,19 @@ import clsx from 'clsx';
 import css from './AppBar.module.css';
 import { NavLink } from 'react-router-dom';
 
+const buildHomeLinkClass = ({ isActive }) => {
+  return clsx(
+    css.navLinkHome,
+    isActive && css.navLinkIsActive
+  );
+};
+const buildCatalogLinkClass = ({ isActive }) => {
+  return clsx(
+    css.navLinkCatalog,
+    isActive && css.navLinkIsActive
+  );
+};
+
 const AppBar = () => {
   return (
     <header className={css.header}>
@@ -19,10 +32,7 @@ const AppBar = () => {
           <ul className={css.navList}>
             <li className={css.navListHome}>
               <NavLink
-                className={clsx(
-                  css.navLinkHome,
-                  css.navLinkIsActive
-                )}
+                className={buildHomeLinkClass}
                 to="/"
               >
                 Home
@@ -30,10 +40,7 @@ const AppBar = () => {
             </li>
             <li>
               <NavLink
-                className={clsx(
-                  css.navLinkCatalog,
-                  css.navLinkIsActive
-                )}
+                className={buildCatalogLinkClass}
                 to="/catalog"
               >
                 Catalog
