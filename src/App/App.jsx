@@ -1,13 +1,21 @@
 // import { useState } from 'react'
 // import css from "./App.module.css";
+import { Route, Routes } from 'react-router-dom';
 import CatalogPage from '../pages/CatalogPage/CatalogPage.jsx';
-// import HomePage from '../pages/HomePage/HomePage.jsx';
+import HomePage from '../pages/HomePage/HomePage.jsx';
 
 function App() {
   return (
     <>
-      {/* <HomePage /> */}
-      <CatalogPage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        {/* <Route
+          path="/catalog:id"
+          element={<CamperPage />}
+        /> */}
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
     </>
   );
 }

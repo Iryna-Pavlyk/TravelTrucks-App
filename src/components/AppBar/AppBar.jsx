@@ -1,45 +1,43 @@
 import clsx from 'clsx';
 import css from './AppBar.module.css';
+import { NavLink } from 'react-router-dom';
 
 const AppBar = () => {
   return (
     <header className={css.header}>
       <div className={css.mainHeaderContainer}>
         <nav className={css.nav}>
-          <a
-            className={css.navLogoLink}
-            href="./index.html"
-          >
-            {/* <svg
+          <a className={css.navLogoLink} href="/">
+            <svg
               className={css.iconLogo}
               width="136"
               height="16"
             >
               <use href="/src/assets/logo.svg#TravelTrucks"></use>
-            </svg> */}
+            </svg>
           </a>
           <ul className={css.navList}>
             <li className={css.navListHome}>
-              <a
+              <NavLink
                 className={clsx(
                   css.navLinkHome,
                   css.navLinkIsActive
                 )}
-                href="./index.html"
+                to="/"
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
+              <NavLink
                 className={clsx(
                   css.navLinkCatalog,
                   css.navLinkIsActive
                 )}
-                href=""
+                to="/catalog"
               >
                 Catalog
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
