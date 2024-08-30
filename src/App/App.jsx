@@ -6,17 +6,15 @@ import HomePage from '../pages/HomePage/HomePage.jsx';
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        {/* <Route
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/catalog" element={<CatalogPage />} />
+      {/* <Route
           path="/catalog:id"
           element={<CamperPage />}
         /> */}
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-    </>
+      {/* <Route path="*" element={<NotFound />} /> */}
+    </Routes>
   );
 }
 

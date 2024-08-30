@@ -1,22 +1,20 @@
 import { useSelector } from 'react-redux';
-import css from './CampersList.module.css';
 import { selectCampers } from '../../redux/campers/selectors.js';
+import css from './CampersList.module.css';
+import Camper from '../Camper/Camper.jsx';
 
 const CampersList = () => {
   const campers = useSelector(selectCampers);
 
+  // console.log(campers);
   return (
-    <>
-      <ul className={css.campersList}>
-        {campers.map(item => {
-          return (
-            <li className={css.campersItem} key={item.id}>
-              Camper
-            </li>
-          );
-        })}
-      </ul>
-    </>
+    <ul>
+      {campers.map(item => (
+        <li key={item.id} className={css.campersItem}>
+          <Camper item={item} />
+        </li>
+      ))}
+    </ul>
   );
 };
 

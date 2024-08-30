@@ -6,13 +6,14 @@ const campersSlice = createSlice({
   initialState: {
     items: [],
   },
-  extraReducers: builder =>
+  extraReducers: builder => {
     builder.addCase(
       fetchCampers.fulfilled,
       (state, action) => {
         state.items = action.payload;
       }
-    ),
+    );
+  },
 });
 
 export default campersSlice.reducer;
