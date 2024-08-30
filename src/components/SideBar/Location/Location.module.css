@@ -1,0 +1,26 @@
+.containerLocation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.textLocation {
+  color: #6c717b;
+  align-self: stretch;
+}
+.inputLocation {
+  display: flex;
+  width: 360px;
+  height: 56px;
+  padding: 18px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f7f7f7;
+}
+
+.inputLocation:focus {
+  outline: none;
+}

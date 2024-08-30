@@ -1,33 +1,3 @@
-/* Navigation */
-
-.header {
-  background-color: #f7f7f7;
-}
-.nav,
-.navList {
-  display: flex;
-}
-
-.mainHeaderContainer {
-  display: flex;
-  align-items: center;
-  padding: 24px 64px;
-}
-
-.navLogoLink {
-  margin-right: 450px;
-}
-
-.navListHome {
-  margin-right: 32px;
-}
-
-/* .navLinkIsActive {
-  color: #d84343;
-} */
-
-/* /Navigation */
-
 /* Hero */
 
 .heroSection {
