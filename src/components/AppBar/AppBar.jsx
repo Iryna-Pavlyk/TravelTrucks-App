@@ -10,13 +10,13 @@ const AppBar = () => {
             className={css.navLogoLink}
             href="./index.html"
           >
-            <svg
+            {/* <svg
               className={css.iconLogo}
               width="136"
               height="16"
             >
               <use href="/src/assets/logo.svg#TravelTrucks"></use>
-            </svg>
+            </svg> */}
           </a>
           <ul className={css.navList}>
             <li className={css.navListHome}>
