@@ -2,16 +2,23 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2; /* 120% */
+  margin-bottom: 24px;
 }
 
 .vehicleTypeList {
   display: flex;
+  height: 100%;
+  margin-bottom: 40px;
+  border-top: 1px solid #dadde1;
+  width: 360px;
+  padding-top: 24px;
+  gap: 12px;
 }
 
 .vehicleTypeItem {
   display: flex;
-  width: 112px;
-  height: 96px;
+  width: 48px;
+  height: 64px;
   padding: 16px 32px;
   justify-content: center;
   align-items: center;
@@ -20,4 +27,9 @@
   border-radius: 10px;
   border: 1px solid #dadde1;
   mix-blend-mode: multiply;
+}
+
+.vehicleTypeDescription {
+  text-align: center;
+  letter-spacing: -0.005em;
 }

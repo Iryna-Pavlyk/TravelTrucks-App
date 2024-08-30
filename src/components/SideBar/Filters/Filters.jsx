@@ -9,23 +9,48 @@ const Filters = () => {
       </h3>
       <ul className={css.filtersList}>
         <li className={css.filtersItem}>
-          <div>
-            <svg>
-              <use href="/src/assets/logo.svg#TravelTrucks"></use>
+          <div className={css.containerDescription}>
+            <svg width={32} height={32}>
+              <use href="/src/assets/icons/icons.svg#icon-ac"></use>
             </svg>
+            <p className={css.filterDescription}>AC</p>
           </div>
         </li>
         <li className={css.filtersItem}>
-          <div></div>
+          <div className={css.containerDescription}>
+            <svg width={32} height={32}>
+              <use href="/src/assets/icons/icons.svg#icon-automatic"></use>
+            </svg>
+            <p className={css.filterDescription}>
+              Automatic
+            </p>
+          </div>
         </li>
         <li className={css.filtersItem}>
-          <div></div>
+          <div className={css.containerDescription}>
+            <svg width={32} height={32}>
+              <use href="/src/assets/icons/icons.svg#icon-kitchen"></use>
+            </svg>
+            <p className={css.filterDescription}>Kitchen</p>
+          </div>
         </li>
         <li className={css.filtersItem}>
-          <div></div>
+          <div className={css.containerDescription}>
+            <svg width={32} height={32}>
+              <use href="/src/assets/icons/icons.svg#icon-tv"></use>
+            </svg>
+            <p className={css.filterDescription}>TV</p>
+          </div>
         </li>
         <li className={css.filtersItem}>
-          <div></div>
+          <div className={css.containerDescription}>
+            <svg width={32} height={32}>
+              <use href="/src/assets/icons/icons.svg#icon-bathroom"></use>
+            </svg>
+            <p className={css.filterDescription}>
+              Bathroom
+            </p>
+          </div>
         </li>
       </ul>
     </>

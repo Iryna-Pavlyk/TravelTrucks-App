@@ -1,24 +1,48 @@
 .filtersText {
   color: #475467;
   font-weight: 500;
+  margin-bottom: 32px;
 }
 
 .filtersTitle {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2; /* 120% */
+  margin-bottom: 24px;
 }
 
 .filtersList {
   display: flex;
+  width: 360px;
+  border-top: 1px solid #dadde1;
+  padding-top: 24px;
+  row-gap: 8px;
+  column-gap: 12px;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-bottom: 32px;
 }
 
 .filtersItem {
   display: flex;
-  padding: 16px 40px;
+  padding: 16px 12px;
   align-items: center;
+  justify-content: center;
+  width: 86px;
   gap: 8px;
   border-radius: 12px;
   border: 1px solid #dadde1;
   mix-blend-mode: multiply;
+}
+
+.filterDescription {
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+.containerDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
