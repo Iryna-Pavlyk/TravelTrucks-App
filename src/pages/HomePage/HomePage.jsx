@@ -6,7 +6,6 @@ const HomePage = () => {
   return (
     <>
       <AppBar />
-
       <div className={css.heroSection}>
         <div className={css.titleContainer}>
           <h1 className={css.heroTitle}>

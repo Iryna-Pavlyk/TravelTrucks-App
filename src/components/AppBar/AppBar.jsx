@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import css from './AppBar.module.css';
 import { NavLink } from 'react-router-dom';
+import Logo from '../Logo/Logo.jsx';
 
 const buildHomeLinkClass = ({ isActive }) => {
   return clsx(
@@ -20,7 +21,7 @@ const AppBar = () => {
     <header className={css.header}>
       <div className={css.mainHeaderContainer}>
         <nav className={css.nav}>
-          <a className={css.navLogoLink} href="/">
+          {/* <a className={css.navLogoLink} href="/">
             <svg
               className={css.iconLogo}
               width="136"
@@ -28,7 +29,8 @@ const AppBar = () => {
             >
               <use href="/src/assets/logo.svg#TravelTrucks"></use>
             </svg>
-          </a>
+          </a> */}
+          <Logo />
           <ul className={css.navList}>
             <li className={css.navListHome}>
               <NavLink
