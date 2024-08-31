@@ -1,6 +1,5 @@
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import { BsMap } from 'react-icons/bs';
 import css from './SideBarForm.module.css';
 import { useId } from 'react';
 import icons from '../../../assets/sprite.svg';
@@ -37,11 +36,13 @@ const SideBarForm = () => {
               name="location"
               placeholder="Ukraine, Kyiv"
             />
-            <BsMap
+            <svg
               className={css.iconLocation}
               width={20}
               height={20}
-            />
+            >
+              <use href={`${icons}#icon-Map`}></use>
+            </svg>
           </div>
         </div>
 
@@ -49,18 +50,150 @@ const SideBarForm = () => {
         <h3 className={css.filtersTitle}>
           Vehicle equipment
         </h3>
-        <Field
-          type="checkbox"
-          name="equipment"
-          value="ac"
-          id={`equipment-${id}`}
-        />
-        <label>
-          <svg width={32} height={32}>
-            <use href={`${icons}#icon-ac`}></use>
-          </svg>
-          AC
-        </label>
+        <div
+          role="group"
+          aria-labelledby="checkbox-group"
+          className={css.filtersList}
+        >
+          <label className={css.filterDescription}>
+            <Field
+              className={css.filtersItem}
+              type="checkbox"
+              name="equipment"
+              value="ac"
+              id={`equipment-ac-${id}`}
+            />
+            <span className={css.filterSpan}>
+              <svg width={32} height={32}>
+                <use href={`${icons}#icon-ac`}></use>
+              </svg>
+            </span>
+            AC
+          </label>
+
+          <label className={css.filterDescription}>
+            <Field
+              className={css.filtersItem}
+              type="checkbox"
+              name="equipment"
+              value="automatic"
+              id={`equipment-automatic-${id}`}
+            />
+            <span className={css.filterSpan}>
+              <svg width={32} height={32}>
+                <use href={`${icons}#icon-automatic`}></use>
+              </svg>
+            </span>
+            Automatic
+          </label>
+
+          <label className={css.filterDescription}>
+            <Field
+              className={css.filtersItem}
+              type="checkbox"
+              name="equipment"
+              value="kitchen"
+              id={`equipment-kitchen-${id}`}
+            />
+            <span className={css.filterSpan}>
+              <svg width={32} height={32}>
+                <use href={`${icons}#icon-kitchen`}></use>
+              </svg>
+            </span>
+            Kitchen
+          </label>
+          <label className={css.filterDescription}>
+            <Field
+              className={css.filtersItem}
+              type="checkbox"
+              name="equipment"
+              value="tv"
+              id={`equipment-tv-${id}`}
+            />
+            <span className={css.filterSpan}>
+              <svg width={32} height={32}>
+                <use href={`${icons}#icon-tv`}></use>
+              </svg>
+            </span>
+            TV
+          </label>
+          <label className={css.filterDescription}>
+            <Field
+              className={css.filtersItem}
+              type="checkbox"
+              name="equipment"
+              value="bathroom"
+              id={`equipment-bathroom-${id}`}
+            />
+            <span className={css.filterSpan}>
+              <svg width={32} height={32}>
+                <use href={`${icons}#icon-bathroom`}></use>
+              </svg>
+            </span>
+            Bathroom
+          </label>
+        </div>
+
+        <h3 className={css.vehicleTypeTitle}>
+          Vehicle type
+        </h3>
+        <div
+          className={css.vehicleTypeList}
+          role="group"
+          aria-labelledby="radio-group"
+        >
+          <div className={css.customs}>
+            <label className={css.vehicleTypeDescription}>
+              <Field
+                className={css.vehicleTypeItem}
+                type="radio"
+                name="type"
+                value="van"
+                id={`type-van-${id}`}
+              />
+              <span className={css.vehicleTypeSpan}>
+                <svg width={32} height={32}>
+                  <use href={`${icons}#icon-van`}></use>
+                </svg>
+              </span>
+              Van
+            </label>
+          </div>
+
+          <label className={css.vehicleTypeDescription}>
+            <Field
+              className={css.vehicleTypeItem}
+              type="radio"
+              name="type"
+              value="fullyIntegrated"
+              id={`type-fully-integrated-${id}`}
+            />
+            <span className={css.vehicleTypeSpan}>
+              <svg width={32} height={32}>
+                <use
+                  href={`${icons}#icon-fully-integrated`}
+                ></use>
+              </svg>
+            </span>
+            Fully Integrated
+          </label>
+
+          <label className={css.vehicleTypeDescription}>
+            <Field
+              className={css.vehicleTypeItem}
+              type="radio"
+              name="type"
+              value="alcove"
+              id={`type-alcove-${id}`}
+            />
+            <span className={css.vehicleTypeSpan}>
+              <svg width={32} height={32}>
+                <use href={`${icons}#icon-alcove`}></use>
+              </svg>
+            </span>
+            Alcove
+          </label>
+        </div>
       </Form>
     </Formik>
   );
