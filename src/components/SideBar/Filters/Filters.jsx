@@ -21,7 +21,7 @@ const Filters = () => {
         <li className={css.filtersItem}>
           <div className={css.containerDescription}>
             <svg width={32} height={32}>
-              <use href="/src/assets/icons/icons.svg#icon-automatic"></use>
+              <use href="/src/assets/sprite.svg#icon-automatic"></use>
             </svg>
             <p className={css.filterDescription}>
               Automatic
@@ -31,7 +31,7 @@ const Filters = () => {
         <li className={css.filtersItem}>
           <div className={css.containerDescription}>
             <svg width={32} height={32}>
-              <use href="/src/assets/icons/icons.svg#icon-kitchen"></use>
+              <use href="/src/assets/sprite.svg#icon-kitchen"></use>
             </svg>
             <p className={css.filterDescription}>Kitchen</p>
           </div>
@@ -39,7 +39,7 @@ const Filters = () => {
         <li className={css.filtersItem}>
           <div className={css.containerDescription}>
             <svg width={32} height={32}>
-              <use href="/src/assets/icons/icons.svg#icon-tv"></use>
+              <use href="/src/assets/sprite.svg#icon-tv"></use>
             </svg>
             <p className={css.filterDescription}>TV</p>
           </div>
@@ -47,7 +47,7 @@ const Filters = () => {
         <li className={css.filtersItem}>
           <div className={css.containerDescription}>
             <svg width={32} height={32}>
-              <use href="/src/assets/icons/icons.svg#icon-bathroom"></use>
+              <use href="/src/assets/sprite.svg#icon-bathroom"></use>
             </svg>
             <p className={css.filterDescription}>
               Bathroom

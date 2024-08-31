@@ -8,7 +8,7 @@ const VehicleType = () => {
         <li className={css.vehicleTypeItem}>
           <div className={css.vehicleTypeContainer}>
             <svg width={32} height={32}>
-              <use href="/src/assets/icons/icons.svg#icon-van"></use>
+              <use href="/src/assets/sprite.svg#icon-van"></use>
             </svg>
             <p className={css.vehicleTypeDescription}>
               Van
@@ -18,7 +18,7 @@ const VehicleType = () => {
         <li className={css.vehicleTypeItem}>
           <div className={css.vehicleTypeContainer}>
             <svg width={32} height={32}>
-              <use href="/src/assets/icons/icons.svg#icon-fully-integrated"></use>
+              <use href="/src/assets/sprite.svg#icon-fully-integrated"></use>
             </svg>
             <p className={css.vehicleTypeDescription}>
               Fully Integrated
@@ -28,7 +28,7 @@ const VehicleType = () => {
         <li className={css.vehicleTypeItem}>
           <div className={css.vehicleTypeContainer}>
             <svg width={32} height={32}>
-              <use href="/src/assets/icons/icons.svg#icon-alcove"></use>
+              <use href="/src/assets/sprite.svg#icon-alcove"></use>
             </svg>
             <p className={css.vehicleTypeDescription}>
               Alcove
