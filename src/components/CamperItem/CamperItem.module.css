@@ -1,0 +1,51 @@
+.camperItemContainer {
+  padding: 64px 48px 80px;
+}
+
+.camperContainerImg {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+.camperImg {
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #475467;
+}
+
+.camperDescription {
+  color: #475467;
+  font-weight: 400;
+}
+
+.camperName {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3; /* 133.333% */
+}
+.camperNameContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.camperPrice {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3; /* 133.333% */
+  margin-bottom: 28px;
+}
+
+.camperReviewsContainer {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.camperReviews,
+.camperLocation {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}

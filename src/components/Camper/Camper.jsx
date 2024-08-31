@@ -9,6 +9,7 @@ import { FaStar } from 'react-icons/fa';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { BsMap } from 'react-icons/bs';
 import ShowMoreBtn from '../ShowMoreBtn/ShowMoreBtn.jsx';
+import { Link } from 'react-router-dom';
 
 const Camper = ({ item }) => {
   return (
@@ -93,7 +94,9 @@ const Camper = ({ item }) => {
             ) : null}
           </div>
         </div>
-        <ShowMoreBtn />
+        <Link to={`/catalog/${item.id}`}>
+          <ShowMoreBtn />
+        </Link>
       </div>
     </div>
   );
