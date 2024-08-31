@@ -7,7 +7,6 @@
 
 .vehicleTypeList {
   display: flex;
-  height: 100%;
   margin-bottom: 40px;
   border-top: 1px solid #dadde1;
   width: 360px;

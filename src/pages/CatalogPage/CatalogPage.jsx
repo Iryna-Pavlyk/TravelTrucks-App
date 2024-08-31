@@ -5,6 +5,7 @@ import CampersList from '../../components/CampersList/CampersList.jsx';
 import css from './CatalogPage.module.css';
 import { useEffect } from 'react';
 import { fetchCampers } from '../../redux/campers/operations.js';
+import LoadMoreBtn from '../../components/LoadMoreBtn/LoadMoreBtn.jsx';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -16,11 +17,16 @@ const CatalogPage = () => {
   return (
     <>
       <AppBar />
-      <div className={css.containerCatalogPage}>
-        <div className={css.containerSideBar}>
-          <SideBar />
+      <div className={css.containerCatalog}>
+        <div className={css.containerCatalogPage}>
+          <div className={css.containerSideBar}>
+            <SideBar />
+          </div>
+          <CampersList />
         </div>
-        <CampersList />
+        <div className={css.containerBtn}>
+          <LoadMoreBtn />
+        </div>
       </div>
     </>
   );
