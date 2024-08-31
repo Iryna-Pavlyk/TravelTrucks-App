@@ -5,7 +5,8 @@ import CamperItem from '../../components/CamperItem/CamperItem.jsx';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { fetchCamperById } from '../../redux/campers/operations.js';
-import { selectCamperById } from '../../redux/campers/selectors.js';
+import { selectStatus } from '../../redux/campers/selectors.js';
+import Loader from '../../components/Loader/Loader.jsx';
 
 const CamperPage = () => {
   const { id } = useParams();
@@ -15,12 +16,13 @@ const CamperPage = () => {
     dispatch(fetchCamperById(id));
   }, [dispatch, id]);
 
-  const camper = useSelector(selectCamperById);
+  // const camper = useSelector(selectCamperById);
+  const status = useSelector(selectStatus);
 
   return (
     <>
       <AppBar />
-      <CamperItem />
+      {status === 'loading' ? <Loader /> : <CamperItem />}
     </>
   );
 };
