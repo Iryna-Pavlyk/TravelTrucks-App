@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import css from './SideBarForm.module.css';
 import { useId } from 'react';
 import icons from '../../../assets/sprite.svg';
+import SearchBtn from '../SearchBtn/SearchBtn.jsx';
 
 const validationSchema = Yup.object({
   location: Yup.string(),
@@ -15,7 +16,7 @@ const SideBarForm = () => {
   const id = useId();
 
   const handleSubmit = async (values, actions) => {
-    onFilter({ location: values.location });
+    // onFilter({ location: values.location });
     actions.resetForm();
   };
 
@@ -64,11 +65,13 @@ const SideBarForm = () => {
               id={`equipment-ac-${id}`}
             />
             <span className={css.filterSpan}>
-              <svg width={32} height={32}>
-                <use href={`${icons}#icon-ac`}></use>
-              </svg>
+              <div className={css.filterVehSpan}>
+                <svg width={32} height={32}>
+                  <use href={`${icons}#icon-ac`}></use>
+                </svg>
+                AC
+              </div>
             </span>
-            AC
           </label>
 
           <label className={css.filterDescription}>
@@ -80,11 +83,15 @@ const SideBarForm = () => {
               id={`equipment-automatic-${id}`}
             />
             <span className={css.filterSpan}>
-              <svg width={32} height={32}>
-                <use href={`${icons}#icon-automatic`}></use>
-              </svg>
+              <div className={css.filterVehSpan}>
+                <svg width={32} height={32}>
+                  <use
+                    href={`${icons}#icon-automatic`}
+                  ></use>
+                </svg>
+                Automatic
+              </div>
             </span>
-            Automatic
           </label>
 
           <label className={css.filterDescription}>
@@ -96,11 +103,13 @@ const SideBarForm = () => {
               id={`equipment-kitchen-${id}`}
             />
             <span className={css.filterSpan}>
-              <svg width={32} height={32}>
-                <use href={`${icons}#icon-kitchen`}></use>
-              </svg>
+              <div className={css.filterVehSpan}>
+                <svg width={32} height={32}>
+                  <use href={`${icons}#icon-kitchen`}></use>
+                </svg>
+                Kitchen
+              </div>
             </span>
-            Kitchen
           </label>
           <label className={css.filterDescription}>
             <Field
@@ -111,11 +120,13 @@ const SideBarForm = () => {
               id={`equipment-tv-${id}`}
             />
             <span className={css.filterSpan}>
-              <svg width={32} height={32}>
-                <use href={`${icons}#icon-tv`}></use>
-              </svg>
+              <div className={css.filterVehSpan}>
+                <svg width={32} height={32}>
+                  <use href={`${icons}#icon-tv`}></use>
+                </svg>
+                TV
+              </div>
             </span>
-            TV
           </label>
           <label className={css.filterDescription}>
             <Field
@@ -126,11 +137,15 @@ const SideBarForm = () => {
               id={`equipment-bathroom-${id}`}
             />
             <span className={css.filterSpan}>
-              <svg width={32} height={32}>
-                <use href={`${icons}#icon-bathroom`}></use>
-              </svg>
+              <div className={css.filterVehSpan}>
+                <svg width={32} height={32}>
+                  <use
+                    href={`${icons}#icon-bathroom`}
+                  ></use>
+                </svg>
+                Bathroom
+              </div>
             </span>
-            Bathroom
           </label>
         </div>
 
@@ -152,11 +167,13 @@ const SideBarForm = () => {
                 id={`type-van-${id}`}
               />
               <span className={css.vehicleTypeSpan}>
-                <svg width={32} height={32}>
-                  <use href={`${icons}#icon-van`}></use>
-                </svg>
+                <div className={css.vehicleSpan}>
+                  <svg width={32} height={32}>
+                    <use href={`${icons}#icon-van`}></use>
+                  </svg>
+                  Van
+                </div>
               </span>
-              Van
             </label>
           </div>
 
@@ -169,13 +186,15 @@ const SideBarForm = () => {
               id={`type-fully-integrated-${id}`}
             />
             <span className={css.vehicleTypeSpan}>
-              <svg width={32} height={32}>
-                <use
-                  href={`${icons}#icon-fully-integrated`}
-                ></use>
-              </svg>
+              <div className={css.vehicleSpan}>
+                <svg width={32} height={32}>
+                  <use
+                    href={`${icons}#icon-fully-integrated`}
+                  ></use>
+                </svg>
+                Fully Integrated
+              </div>
             </span>
-            Fully Integrated
           </label>
 
           <label className={css.vehicleTypeDescription}>
@@ -187,13 +206,16 @@ const SideBarForm = () => {
               id={`type-alcove-${id}`}
             />
             <span className={css.vehicleTypeSpan}>
-              <svg width={32} height={32}>
-                <use href={`${icons}#icon-alcove`}></use>
-              </svg>
+              <div className={css.vehicleSpan}>
+                <svg width={32} height={32}>
+                  <use href={`${icons}#icon-alcove`}></use>
+                </svg>
+                Alcove
+              </div>
             </span>
-            Alcove
           </label>
         </div>
+        <SearchBtn />
       </Form>
     </Formik>
   );

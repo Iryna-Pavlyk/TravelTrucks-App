@@ -114,4 +114,12 @@
   border-color: #e44848;
 }
 
+.vehicleSpan,
+.filterVehSpan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /*  /VehicleType*/
