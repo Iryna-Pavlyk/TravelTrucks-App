@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import CatalogPage from '../pages/CatalogPage/CatalogPage.jsx';
 import HomePage from '../pages/HomePage/HomePage.jsx';
+import NotFoundPage from '../pages/NotFoundPage/NotFoundPage.jsx';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           path="/catalog:id"
           element={<CamperPage />}
         /> */}
-      {/* <Route path="*" element={<NotFound />} /> */}
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
