@@ -21,7 +21,7 @@ const CamperPage = () => {
   }, [dispatch, id]);
 
   if (!camper || !camper.name) {
-    return <p>No data</p>;
+    return <Loader />;
   }
 
   return (

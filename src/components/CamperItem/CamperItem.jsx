@@ -3,11 +3,20 @@ import css from './CamperItem.module.css';
 import { FaStar } from 'react-icons/fa';
 import { BsMap } from 'react-icons/bs';
 import { selectCamperById } from '../../redux/campers/selectors.js';
-// import Features from '../Features/Features.jsx';
-// import { Link } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
+import Loader from '../Loader/Loader.jsx';
+import { Suspense } from 'react';
+import clsx from 'clsx';
 
 const CamperItem = () => {
   const camper = useSelector(selectCamperById);
+
+  const buildCamperLinkClass = ({ isActive }) => {
+    return clsx(
+      css.camperLink,
+      isActive && css.camperLinkIsActive
+    );
+  };
 
   return (
     <div className={css.camperItemContainer}>
@@ -54,12 +63,26 @@ const CamperItem = () => {
       <p className={css.camperDescription}>
         {camper.description}
       </p>
-      {/* <Link to="features">
-        <h2>Features</h2>
-      </Link>
-      <Link to="reviews">
-        <h2>Reviews</h2>
-      </Link> */}
+
+      <div className={css.camperLinksContainer}>
+        <NavLink
+          className={buildCamperLinkClass}
+          to="features"
+        >
+          <h3>Features</h3>
+        </NavLink>
+        <NavLink
+          className={buildCamperLinkClass}
+          to="reviews"
+        >
+          <h3>Reviews</h3>
+        </NavLink>
+      </div>
+      <hr className={css.line} />
+
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

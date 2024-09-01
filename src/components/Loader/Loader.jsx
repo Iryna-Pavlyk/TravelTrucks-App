@@ -6,8 +6,8 @@ const Loader = () => {
     <div className={css.loader}>
       <ColorRing
         visible={true}
-        height="80"
-        width="80"
+        height="60"
+        width="60"
         ariaLabel="color-ring-loading"
         wrapperClass="color-ring-wrapper"
         colors={[

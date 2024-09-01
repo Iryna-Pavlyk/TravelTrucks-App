@@ -17,6 +17,7 @@
 .camperDescription {
   color: #475467;
   font-weight: 400;
+  margin-bottom: 60px;
 }
 
 .camperName {
@@ -48,4 +49,37 @@
   display: flex;
   gap: 4px;
   align-items: center;
+}
+.line {
+  height: 0px;
+  flex-shrink: 0;
+  stroke-width: 1px;
+  stroke: #dadde1;
+  margin-bottom: 44px;
+}
+
+.camperLinksContainer {
+  display: flex;
+  gap: 40px;
+}
+
+.camperLink {
+  color: #101828;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2; /* 120% */
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.camperLinkIsActive::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: -32px;
+  display: block;
+  border-radius: 2px;
+  background: #e44848;
 }
