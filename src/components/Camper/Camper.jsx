@@ -29,7 +29,7 @@ const Camper = ({ item }) => {
             <h2 className={css.camperName}>{item.name}</h2>
             <div className={css.camperPriceContainer}>
               <p className={css.camperPrice}>
-                €{item.price}
+                €{item.price.toFixed(2)}
               </p>
               <IoMdHeartEmpty
                 className={css.iconHeart}
