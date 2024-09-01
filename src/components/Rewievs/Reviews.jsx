@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import css from './Reviews.module.css';
 import { selectCamperById } from '../../redux/campers/selectors.js';
+import StarRating from '../StarRating/StarRating.jsx';
 
 const Reviews = () => {
   const camper = useSelector(selectCamperById);
@@ -19,7 +20,9 @@ const Reviews = () => {
             <div>
               <h3>{review.reviewer_name}</h3>
               <p>
-                Rating: {review.reviewer_rating} out of 5
+                <StarRating
+                  rating={review.reviewer_rating}
+                />
               </p>
             </div>
           </div>
