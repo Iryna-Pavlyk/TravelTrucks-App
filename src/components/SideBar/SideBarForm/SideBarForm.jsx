@@ -4,6 +4,7 @@ import css from './SideBarForm.module.css';
 import { useId } from 'react';
 import icons from '../../../assets/sprite.svg';
 import SearchBtn from '../SearchBtn/SearchBtn.jsx';
+import { changeFilter } from '../../../redux/filters/slice.js';
 
 const validationSchema = Yup.object({
   location: Yup.string(),
@@ -15,8 +16,10 @@ const SideBarForm = () => {
   const values = { location: '', equipment: [], type: '' };
   const id = useId();
 
-  const handleSubmit = async (values, actions) => {
-    // onFilter({ location: values.location });
+  const handleSubmit = (values, actions) => {
+    console.log(values);
+
+    changeFilter({ location: values.location });
     actions.resetForm();
   };
 
@@ -36,7 +39,7 @@ const SideBarForm = () => {
               id={`location-${id}`}
               name="location"
               placeholder="Ukraine, Kyiv"
-            />
+            ></Field>
             <svg
               className={css.iconLocation}
               width={20}

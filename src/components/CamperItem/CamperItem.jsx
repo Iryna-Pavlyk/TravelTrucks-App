@@ -3,6 +3,8 @@ import css from './CamperItem.module.css';
 import { FaStar } from 'react-icons/fa';
 import { BsMap } from 'react-icons/bs';
 import { selectCamperById } from '../../redux/campers/selectors.js';
+// import Features from '../Features/Features.jsx';
+// import { Link } from 'react-router-dom';
 
 const CamperItem = () => {
   const camper = useSelector(selectCamperById);
@@ -52,6 +54,12 @@ const CamperItem = () => {
       <p className={css.camperDescription}>
         {camper.description}
       </p>
+      {/* <Link to="features">
+        <h2>Features</h2>
+      </Link>
+      <Link to="reviews">
+        <h2>Reviews</h2>
+      </Link> */}
     </div>
   );
 };
