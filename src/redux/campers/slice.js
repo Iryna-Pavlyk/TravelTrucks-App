@@ -23,7 +23,7 @@ const campersSlice = createSlice({
       .addCase(
         fetchCamperById.fulfilled,
         (state, action) => {
-          state.status = 'succes';
+          state.status = 'success';
           state.camperById = action.payload;
         }
       )
