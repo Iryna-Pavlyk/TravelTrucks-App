@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Loader from '../components/Loader/Loader.jsx';
+import Reviews from '../components/Rewievs/Reviews.jsx';
 
 const HomePage = lazy(() =>
   import('../pages/HomePage/HomePage.jsx')
@@ -26,7 +27,7 @@ function App() {
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/catalog/:id" element={<CamperPage />}>
           <Route path="features" element={<Features />} />
-          {/* <Route path="reviews" element={{}} /> */}
+          <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
