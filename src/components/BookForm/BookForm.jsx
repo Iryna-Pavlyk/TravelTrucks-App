@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import toast, { Toaster } from 'react-hot-toast';
 import css from './BookForm.module.css';
 
 const Schema = Yup.object({
@@ -24,12 +25,13 @@ const BookForm = () => {
   };
 
   const handleSubmit = (values, actions) => {
-    onSubmit({
+    ({
       name: values.name,
       email: values.email,
       bookingDate: values.bookingDate,
       comment: values.comment,
     });
+    toast.success('Booking success!');
     actions.resetForm();
   };
 
@@ -103,9 +105,12 @@ const BookForm = () => {
               />
             </div>
 
-            <button type="submit" className={css.button}>
-              Send
-            </button>
+            <div>
+              <button type="submit" className={css.button}>
+                Send
+              </button>
+              <Toaster position="top-center" />
+            </div>
           </Form>
         </Formik>
       </div>
