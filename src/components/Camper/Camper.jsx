@@ -6,12 +6,19 @@ import { PiWindLight } from 'react-icons/pi';
 import { BsCupHot } from 'react-icons/bs';
 import { MdTv } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
-import { IoMdHeartEmpty } from 'react-icons/io';
+import { IoIosHeart } from 'react-icons/io';
 import { BsMap } from 'react-icons/bs';
 import ShowMoreBtn from '../ShowMoreBtn/ShowMoreBtn.jsx';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Camper = ({ item }) => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <div className={css.camperContainer}>
       <div className={css.camperContainerImg}>
@@ -31,8 +38,12 @@ const Camper = ({ item }) => {
               <p className={css.camperPrice}>
                 €{item.price.toFixed(2)}
               </p>
-              <IoMdHeartEmpty
+              <IoIosHeart
                 className={css.iconHeart}
+                onClick={handleClick}
+                style={{
+                  fill: isClicked ? '#E44848' : '#475467',
+                }}
                 width={26}
                 height={24}
               />
